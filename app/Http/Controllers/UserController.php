@@ -14,4 +14,20 @@ class UserController extends Controller
         // $param = ['item' => $items , 'sort' => $sort,'user' => $user];
         return view('user.index',['user' => $user]);
     }
+
+    public function getAuth(Request $request) {
+        $param = ['message' => 'ログインしてください'];
+        return view('user.auth',$param);
+    }
+    
+    public function postAuth(Request $request) {
+        $email = $request -> email;
+        $password = $request -> password;
+        if (Auth::attempt(['email' => $email,'password' => $password])) {
+            $msg = 'ログインしました。('. Auth::user()->name .')';
+        } else {
+            $msg = 'ログインに失敗しました';
+        }
+        return view('user.auth',['message' => $msg]);
+    }
 }
