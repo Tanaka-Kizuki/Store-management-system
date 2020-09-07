@@ -7,27 +7,19 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function index(Request $request) {
-        $user = Auth::user();
-        // $sort = $request -> sort();
-        // $item = Person::orderBy($sort,'asc')->simplePaginate(5);
-        // $param = ['item' => $items , 'sort' => $sort,'user' => $user];
-        return view('user.index',['user' => $user]);
-    }
-
     public function getAuth(Request $request) {
-        $param = ['message' => 'ログインしてください'];
-        return view('user.auth',$param);
+        $title = ['title' => ''];
+        return view('user.auth',$title);
     }
     
     public function postAuth(Request $request) {
         $email = $request -> email;
         $password = $request -> password;
         if (Auth::attempt(['email' => $email,'password' => $password])) {
-            $msg = 'ログインしました。('. Auth::user()->name .')';
+            return redirect('/');
         } else {
-            $msg = 'ログインに失敗しました';
+            $title = ['title' => 'Not found!'];
+            return view('user.auth',$title);
         }
-        return view('user.auth',['message' => $msg]);
     }
 }
