@@ -72,18 +72,6 @@
   text-align: left;
 }
 
-#mail:focus + .mail_string{
-  color: #3be5ae;
-  z-index: 2;
-  font-size: 15px;
-  line-height: 10px;
-  width: 85px;
-  height: 10px;
-  padding: 0 2px;
-  background-color: white;
-  transform:translate3d(5px, -6px, 0);
-}
-
 /* passwordアニメーション */
 .password_box {
   display: flex;
@@ -132,7 +120,7 @@
   text-align: left;
 }
 
-#password:focus + .password_string{
+.not-empty {
   color: #3be5ae;
   z-index: 2;
   font-size: 15px;
@@ -143,6 +131,7 @@
   background-color: white;
   transform:translate3d(5px, -6px, 0);
 }
+
 
 /* loginボタン */
 .btn-gradation {
@@ -161,6 +150,3 @@
   border: none;
 }
 
-.btn-gradation:hover {
-  opacity: 0.8;
-}
