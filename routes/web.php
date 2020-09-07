@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'UserController@index')->middleware('auth');
+Route::get('/home', 'UserController@index');
 
 Route::get('/','UserController@getAuth');
 Route::post('/','UserController@postAuth');

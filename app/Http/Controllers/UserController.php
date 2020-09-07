@@ -8,8 +8,12 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function index(Request $request) {
-        $user = Auth::user();
-        return view('app.home',['user' => $user]);
+        if(Auth::check()) {
+            $user = Auth::user();
+            return view('app.home',['user' => $user]);
+        }else {
+            return redirect('/');
+        };
     }
 
     public function logout() {
