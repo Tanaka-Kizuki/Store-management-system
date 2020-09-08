@@ -21,6 +21,7 @@
                   <p>{{$user->name}} ▼</a>
                   <div  class="item_box">
                     <a class="item" href="/logout">Log Out</a>
+                    <a class="item" href="/signup">Sign up</a>
                   </div>
                 </div>
             @endif
