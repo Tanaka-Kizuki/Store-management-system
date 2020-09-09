@@ -24,4 +24,3 @@ Route::get('/home', 'UserController@index');
 Route::get('/','UserController@getAuth');
 Route::post('/','UserController@postAuth');
 Route::get('/logout','UserController@logout');
-Route::get('/signup','UserController@register');

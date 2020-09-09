@@ -36,9 +36,4 @@ class UserController extends Controller
             return view('app.auth',$title);
         }
     }
-
-    public function register() {
-        $user = Auth::user();
-        return view('app.register',['user' => $user]);
-    }
 }
