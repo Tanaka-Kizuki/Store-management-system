@@ -12,12 +12,14 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{asset('/css/app.css')}}">
+  @stack('css')
 </head>
 <body>
   <div class="top-right links slide">
     @if (Route::has('login'))
     <p>{{ Auth::user()->name }} ▼</a>
     <div  class="item_box">
+        <a class="item" href="/home">Home</a>
         <a class="item" href="/logout">Log Out</a>
         <a class="item" href="/register">Sign up</a>
     </div>
