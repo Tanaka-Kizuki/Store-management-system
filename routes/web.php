@@ -19,10 +19,10 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'UserController@index');
-
 Route::get('/','UserController@getAuth');
 Route::post('/','UserController@postAuth');
+
+Route::get('/home', 'UserController@index');
 Route::get('/logout','UserController@logout');
 
 Route::get('/communication','CommunicationController@index');

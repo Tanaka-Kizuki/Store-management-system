@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Communication</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css//communication.css">
-</head>
-<body>
+@extends('layouts.app')
+@push('css')
+  <link rel="stylesheet" href="css/communication.css">
+@endpush
+
+@section('content')
   <h1 class="main-title">communication</h1>
   <section class="form-area">
     <form action="/communication" method="post">
@@ -18,7 +14,7 @@
         </div>
         <div class="form-field col x-50">
           <p>Name:</p>
-          <input class="input_text" type="text" name="name">
+          <input class="input_text" type="text" name="name" value="{{ Auth::user()->name }}">
         </div>
         <div class="form-field col x-100">
           <p>Message</p>
@@ -31,7 +27,7 @@
   </section>
   <hr>
   @foreach ($items as $item)
-  <div class="item {{$item->id}}">
+  <div class="items {{$item->id}}">
     <div class="header">
         <p class="id">{{$item->id}}</p>
         <p class="title">{{$item->title}}</p>
@@ -51,5 +47,4 @@
   {{$items->links()}}
 
   <script src="js/communication.js"></script>
-</body>
-</html>
+@endsection

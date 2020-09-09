@@ -10,7 +10,7 @@
 
         <div class="links">
             <a href="#">Docs</a>
-            <a href="#">Laracasts</a>
+            <a href="/communication">Communication</a>
             <a href="#">News</a>
         </div>
     </div>
