@@ -33,3 +33,12 @@ Route::post('/communication/edit','CommunicationController@update');
 
 Route::get('/communication/del','CommunicationController@delete');
 Route::post('/communication/del','CommunicationController@remove');
+
+//++Attendance++//
+Route::get('/time','TimeController@index');
+//出退勤打刻
+Route::post('/time/timein','TimeController@timein');
+Route::post('/time/timeout','TimeController@timeout');
+//休憩打刻
+Route::post('/time/breakin','TimeController@breakin');
+Route::post('/time/breakout','TimeController@breakout');
