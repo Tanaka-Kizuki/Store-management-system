@@ -10,14 +10,6 @@ p {
   margin: 0 auto;
 }
 
-.main-title {
-  text-align: center;
-  font-family: Raleway, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  margin-top: 50px;
-}
-
 .form-field {
   margin: 32px 0;
 }
