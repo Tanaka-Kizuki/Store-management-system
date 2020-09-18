@@ -5,35 +5,34 @@
 
 @section('content')
 <h1 class="main-title">Attendance</h1>
+<p class="day">{{$day}}</p>
 <output class="realtime"></output>
 <p>{{session('message')}}</p>
 <form class="timestamp" action="/time/timein" method="post">
 @csrf
-  <button>
-    出勤
-  </button>
+  <button class="button1">出勤</button>
 </form>
 
 <form class="timestamp" action="/time/timeout" method="post">
 @csrf
-<button>退勤</button>
+  <button class="button2">退勤</button>
 </form>
 
 <form class="timestamp" action="/time/breakin" method="post">
 @csrf
-  <button>休憩開始</button>
+  <button class="button3">休憩開始</button>
 </form>
 
 <form class="timestamp" action="/time/breakout" method="post">
 @csrf
-  <button>休憩終了</button>
+  <button class="button4">休憩終了</button>
 </form>
 
 <div class="container">
   @foreach ($itmes as $itme)
   <div class="attendance">
+    <p class="name">{{$itme->user_name}}</p>
     <table>
-      <th>{{$itme->user_name}}</th>
       <tr><td>出勤</td><td>{{$itme->punchIn}}</td></tr>
       <tr><td>休憩開始</td><td>{{$itme->breakIn}}</td></tr>
       <tr><td>休憩終了</td><td>{{$itme->breakOut}}</td></tr>

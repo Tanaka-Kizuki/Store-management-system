@@ -14,9 +14,10 @@ class TimeController extends Controller
         $today = Carbon::today();
         $month = intval($today->month);
         $day = intval($today->day);
+        $format = $today->format('Y年m月d日');
         //当日の勤怠を取得
         $items = Time::GetMonthAttendance($month)->GetDayAttendance($day)->get();
-        return view('time.index',['itmes'=>$items]);
+        return view('time.index',['itmes'=>$items,'day' => $format]);
     }
 
     //出勤アクション
