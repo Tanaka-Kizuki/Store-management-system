@@ -62,3 +62,11 @@ html, body {
   text-decoration: none;
   display: block;
 }
+
+.main-title {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-top: 50px;
+}

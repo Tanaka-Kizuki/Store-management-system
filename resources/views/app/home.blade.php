@@ -9,7 +9,7 @@
         </div>
 
         <div class="links">
-            <a href="#">Docs</a>
+            <a href="/time">Attendance</a>
             <a href="/communication">Communication</a>
             <a href="#">News</a>
         </div>
