@@ -28,6 +28,10 @@
   <button class="button4">休憩終了</button>
 </form>
 
+<a href="/time/performance">
+  <button class="button5">勤怠実績</button>
+</a>
+
 <div class="container">
   @foreach ($itmes as $itme)
   <div class="attendance">
@@ -43,3 +47,4 @@
   @endforeach
 </div>
 <script src="{{asset('/js/time.js')}}"></script>
+@endsection

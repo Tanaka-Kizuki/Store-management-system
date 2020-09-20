@@ -1,0 +1,37 @@
+.search {
+     display: flex;
+     justify-content: center;
+}
+
+form {
+     text-align: center;
+     margin-right: 20px;
+}
+
+.year {
+     display: inline;
+}
+
+.month {
+     display: inline;
+}
+
+.return {
+     display: inline;
+}
+
+.container {
+     display:flex; 
+     flex-wrap: wrap;
+}
+   
+.attendance{
+     border:1px solid #636b6f;; 
+     width: 22%; 
+     margin: 5px auto;
+     border-radius: 15px;
+}
+
+table {
+     margin: 0 auto;
+}

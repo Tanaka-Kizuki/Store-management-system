@@ -32,6 +32,7 @@ button {
 
 .button4 {
   border: 2px solid rgb(232, 255, 128);
+  margin-right: 30px;
 }
 
 .day {
@@ -45,7 +46,7 @@ button {
 }
 
 .attendance{
-  border:1px solid black; 
+  border:1px solid #636b6f;; 
   width: 35%; 
   margin: 10px auto;
   border-radius: 15px;

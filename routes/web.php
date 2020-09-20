@@ -42,3 +42,6 @@ Route::post('/time/timeout','TimeController@timeout');
 //休憩打刻
 Route::post('/time/breakin','TimeController@breakin');
 Route::post('/time/breakout','TimeController@breakout');
+//勤怠実績
+Route::get('/time/performance','TimeController@performance');
+Route::post('/time/performance','TimeController@result');
