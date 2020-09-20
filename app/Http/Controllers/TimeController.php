@@ -11,13 +11,17 @@ use App\Time;
 class TimeController extends Controller
 {
     public function index() {
-        $today = Carbon::today();
-        $month = intval($today->month);
-        $day = intval($today->day);
-        $format = $today->format('Y年m月d日');
-        //当日の勤怠を取得
-        $items = Time::GetMonthAttendance($month)->GetDayAttendance($day)->get();
-        return view('time.index',['itmes'=>$items,'day' => $format]);
+        if(Auth::check()) {
+            $today = Carbon::today();
+            $month = intval($today->month);
+            $day = intval($today->day);
+            $format = $today->format('Y年m月d日');
+            //当日の勤怠を取得
+            $items = Time::GetMonthAttendance($month)->GetDayAttendance($day)->get();
+            return view('time.index',['itmes'=>$items,'day' => $format]);
+        } else {
+            return redirect('/');
+        }
     }
 
     //出勤アクション
