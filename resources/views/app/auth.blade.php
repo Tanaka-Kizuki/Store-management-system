@@ -12,7 +12,7 @@
 </head>
 <body>
   <div id="login">
-    <p class=title>Cafe fe Drip</p>
+    <p class=title>Cafe de Drip</p>
     <p class=message>{{$title}}</p>
     <form action="/" method="post">
       @csrf
