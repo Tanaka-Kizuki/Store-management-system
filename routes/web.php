@@ -45,3 +45,6 @@ Route::post('/time/breakout','TimeController@breakout');
 //勤怠実績
 Route::get('/time/performance','TimeController@performance');
 Route::post('/time/performance','TimeController@result');
+//日次勤怠
+Route::get('/time/daily','TimeController@daily');
+Route::post('/time/daily','TimeController@dailyResult');

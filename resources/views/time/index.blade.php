@@ -32,6 +32,10 @@
   <button class="button5">勤怠実績</button>
 </a>
 
+<a href="/time/daily">
+  <button class="button6">日次勤怠</button>
+</a>
+
 <div class="container">
   @foreach ($itmes as $itme)
   <div class="attendance">

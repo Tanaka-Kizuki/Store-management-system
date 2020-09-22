@@ -142,11 +142,21 @@ class TimeController extends Controller
     //勤怠実績
     public function performance() {
         $items = [];
-        return view('time.performance',['itmes'=>$items]);
+        return view('time.performance',['items'=>$items]);
     }
     public function result(Request $request) {
         $user = Auth::user();
         $items = Time::where('user_id',$user->id)->where('year',$request->year)->where('month',$request->month)->get();
-        return view('time.performance',['itmes'=>$items]);
+        return view('time.performance',['items'=>$items]);
+    }
+
+    //日次勤怠
+    public function daily() {
+        $items = [];
+        return view('time.daily',['items'=>$items]);
+    }
+    public function dailyResult(Request $request) {
+        $items = Time::where('year',$request->year)->where('month',$request->month)->where('day',$request->day)->get();
+        return view('time.daily',['items'=> $items]);
     }
 }
