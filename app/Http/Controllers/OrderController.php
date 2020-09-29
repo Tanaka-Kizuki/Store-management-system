@@ -35,7 +35,7 @@ class orderController extends Controller
         // 発注テーブル
         $oldOrder = Order::latest()->first();
         if($oldOrder) {
-            if($oldOrder->today == $orderDate) {
+            if($oldOrder->orderdate == $orderDate) {
                 $oldOrder->fill($datas)->save();
             } else {
                 $order = Order::create([
@@ -44,7 +44,7 @@ class orderController extends Controller
             }
         } else {
             $order = Order::create([
-                    'orderdate' => $orderDate, 
+                'orderdate' => $orderDate, 
             ]);
         }
 
@@ -69,7 +69,7 @@ class orderController extends Controller
                         'order_id' => $order->id,
                         'name' => $datas[$i]['name'],
                         'count' => $datas[$i]['count'],
-                        'total' => $item->prise * $orderCount,
+                        'total' => $item->price * $orderCount,
                         'order_count' => $orderCount,
                     ]);
                     $msg = '発注が確定しました';
@@ -81,7 +81,7 @@ class orderController extends Controller
                     'order_id' => $order->id,
                     'name' => $datas[$i]['name'],
                     'count' => $datas[$i]['count'],
-                    'total' => $item->prise * $orderCount,
+                    'total' => $item->price * $orderCount,
                     'order_count' => $orderCount,
                 ]);
                 $msg = '発注が確定しました';
@@ -97,7 +97,7 @@ class orderController extends Controller
             $totalPrice = $totalPrice + $item->total;
         };
 
-        $param = ['items' => $items,'price' => $totalPrice,'orderDay' => $orderDay,'delivery' => $delivery,'msg' => $msg];
+        $param = ['items' => $items,'price' => $totalPrice,'orderDay' => $orderDate,'delivery' => $delivery,'msg' => $msg];
 
         return view('order.confirmation',$param);
 
@@ -112,15 +112,15 @@ class orderController extends Controller
 
     public function display(Request $request) {
         $select = new Carbon($request->date);
-        $orderDay = $select->format('Y年m月d日');
-        $orderDayTomorrow = $select->tomorrow()->format('Y年m月d日');
-        $orders = Order::where('today',$orderDay)->latest()->first();
+        $orderDate = $select->format('Y年m月d日');
+        $orderDateTomorrow = $select->tomorrow()->format('Y年m月d日');
+        $orders = Order::where('orderdate',$orderDate)->latest()->first();
         $msg = '発注実績がありません';
         //発注実績がある場合のみ表示
         $datas = [];
         if($orders) {
             $datas = Data::where('order_id',$orders->id)->get();
-            $msg = '発注日:' . $orderDay .' 納品日' . $orderDayTomorrow;
+            $msg = '発注日:' . $orderDate .' 納品日' . $orderDateTomorrow;
         }
         return view('order.history',['items'=>$datas, 'msg' => $msg]);
     }

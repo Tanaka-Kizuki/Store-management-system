@@ -6,7 +6,7 @@
     <label for="price">価格</label>
     <input type="number" name="price" id="price">
     <label for="base">適正数値</label>
-    <input type="number" name="base" id="base">
+    <input type="number" step="0.1" name="base" id="base">
 
     <input type="submit" value="商品登録">
 </form>
