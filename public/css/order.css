@@ -17,17 +17,17 @@
 }
 
 .button1 {
-     border: 2px solid rgb(255, 128, 198);
+     border: 2px solid #02abff;
      margin-right: 30px;
 }
    
 .button2 {
-     border: 2px solid rgb(128, 158, 255);
+     border: 2px solid #005d88;
      margin-right: 30px;
 }
-   
+
 .button3 {
-     border: 2px solid rgb(128, 255, 149);
+     border: 2px solid #01334d;
 }
 
 .date {
@@ -56,5 +56,30 @@ th {
      height: 40px;
      border-radius: 20px;
      text-decoration: none;
+     margin-right: 30px;
 }
 
+.back {
+     display: inline-block;
+     width: 80px;
+     height: 40px;
+     background-color: #fff;
+     border-radius: 20px;
+}
+
+.back a {
+     color: #636b6f;
+     text-decoration: none;
+}
+
+.totalPrice {
+     font-size: 20px;
+     font-weight: bold;
+}
+
+.msg {
+     color: red;
+     text-align: center;
+     font-weight: bold;
+     font-size: 25px;
+}

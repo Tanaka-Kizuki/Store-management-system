@@ -27,8 +27,8 @@
                @foreach($items as $item)
                     <tr>
                          <th><p>{{$item->name}}</p></th>
-                         <th>{{$item->base}}</th>
-                         <th>{{$item->price}}</th>
+                         <th>{{$item->base}}個</th>
+                         <th>￥{{$item->price}}</th>
                          <th><input type="number" step="0.1" name="{{$item->id}}[count]"></th>
                          <input type="hidden" name="{{$item->id}}[name]" value="{{$item->name}}">
                     </tr>
@@ -36,7 +36,7 @@
                </tbody>
           </table>
           <input class="confirm" type="submit" value="発注確定">
-          <a class="button" href="/order">戻る</a>
+          <button class="back"><a href="/order">戻る</a></button>
      </form>
 </div>
 
