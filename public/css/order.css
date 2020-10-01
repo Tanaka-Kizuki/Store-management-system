@@ -57,6 +57,7 @@ th {
      border-radius: 20px;
      text-decoration: none;
      margin-right: 30px;
+     outline:none;
 }
 
 .back {
@@ -65,6 +66,8 @@ th {
      height: 40px;
      background-color: #fff;
      border-radius: 20px;
+     outline:none;
+
 }
 
 .back a {

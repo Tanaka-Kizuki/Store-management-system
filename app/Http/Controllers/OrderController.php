@@ -107,7 +107,8 @@ class orderController extends Controller
     public function history() {
         $items = [];
         $msg = '発注履歴';
-        return view('order.history',['items'=>$items, 'msg' => $msg]);
+        $totalPrice="";
+        return view('order.history',['items'=>$items, 'msg' => $msg,'price' => $totalPrice]);
     }
 
     public function display(Request $request) {
@@ -120,9 +121,13 @@ class orderController extends Controller
         $datas = [];
         if($orders) {
             $datas = Data::where('order_id',$orders->id)->get();
+            $totalPrice = 0;
+            foreach($datas as $data) {
+            $totalPrice = $totalPrice + $data->total;
+            };
             $msg = '発注日:' . $orderDate .' 納品日' . $orderDateTomorrow;
         }
-        return view('order.history',['items'=>$datas, 'msg' => $msg]);
+        return view('order.history',['items'=>$datas, 'msg' => $msg,'price' => $totalPrice]);
     }
 
     //商品設定
