@@ -1,0 +1,31 @@
+.container {
+     margin: 0 auto;
+     text-align: center;
+}
+
+.link {
+     display: inline-block;
+     width: 80px;
+     height: 80px;
+     border-radius: 40px;
+     color: rgb(0, 0, 0);
+     text-decoration: none;
+     background-color: #fff;
+     outline:none;
+     line-height: 80px;
+     font-weight: 100;
+}
+
+.button1 {
+     border: 2px solid rgb(255, 128, 198);
+     margin-right: 30px;
+}
+   
+.button2 {
+     border: 2px solid rgb(128, 158, 255);
+     margin-right: 30px;
+}
+   
+.button3 {
+     border: 2px solid rgb(128, 255, 149);
+}
