@@ -29,3 +29,32 @@
 .button3 {
      border: 2px solid rgb(128, 255, 149);
 }
+
+.date {
+     display: flex;
+     justify-content: center;
+}
+
+.input_form {
+     text-align: center;
+}
+
+.input_table {
+     margin: 20px auto;
+     border-collapse: separate;
+}
+
+th {
+     padding-right: 50px;
+}
+
+.confirm {
+     display: inline-block;
+     background-color: #fff;
+     color: #636b6f;
+     width: 80px;
+     height: 40px;
+     border-radius: 20px;
+     text-decoration: none;
+}
+
