@@ -86,3 +86,9 @@ th {
      font-weight: bold;
      font-size: 25px;
 }
+
+.edit {
+     display: block;
+     width: 20px;
+     height: 20px;
+}
