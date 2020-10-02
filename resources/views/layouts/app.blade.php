@@ -21,7 +21,9 @@
     <div  class="item_box">
         <a class="item" href="/home">Home</a>
         <a class="item" href="/logout">Log Out</a>
-        <a class="item" href="/register">Sign up</a>
+        @if ( Auth::user()->admin  == 0)
+          <a class="item" href="/register">Sign up</a>
+        @endif
     </div>
     @endif
   </div>
