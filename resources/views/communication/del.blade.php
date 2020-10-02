@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h2>削除ページ</h2>
-  <div>
-    <form action="/communication/del" method="post">
+@extends('layouts.app')
+
+@push('css')
+  <link rel="stylesheet" href="{{asset('/css/communication.css')}}">
+@endpush
+
+@section('content')
+<h1 class="main-title">communication:Delete</h1>
+<div class="del">
+  <form action="/communication/del" method="post">
     @csrf
-      <input type="hidden" name="id" value="{{$form->id}}">
-      <p>{{$form->title}}</p>
-      <p>{{$form->name}}</p>
+    <input type="hidden" name="id" value="{{$form->id}}">
+    <u><p>{{$form->title}}</p></u>
+    <div class="body">
       <p>{{$form->message}}</p>
-      <input type="submit" value="delete">
-    </form>
-  </div>
-</body>
-</html>
+    </div>
+    <input class="btn" type="submit" value="delete">
+  </form>
+</div>
+@endsection

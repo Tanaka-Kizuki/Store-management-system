@@ -27,7 +27,6 @@ class CommunicationController extends Controller
     }
 
     public function update(Request $request) {
-        $this->validate($request,Post::$rules);
         $post = Post::find($request->id);
         $form = $request -> all();
         unset($form['_token']);

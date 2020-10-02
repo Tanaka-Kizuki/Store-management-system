@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @push('css')
-  <link rel="stylesheet" href="css/communication.css">
+  <link rel="stylesheet" href="{{asset('/css/communication.css')}}">
 @endpush
 
 @section('content')
@@ -37,8 +37,8 @@
     </div>
     <div class="footer">
       <p class="name">担当: {{$item->name}}</p>
-      <a href="/communication/edit?id={{$item->id}}">編集</a>
-      <a href="/communication/del?id={{$item->id}}">削除</a>
+      <a class="edit" href="/communication/edit?id={{$item->id}}"><img src="{{asset('/image/edit.svg')}}"></a>
+      <a class="dust" href="/communication/del?id={{$item->id}}"><img src="{{asset('/image/dust.svg')}}"></a></a>
       <p class="date">{{$item->updated_at}}</p>
     </div>
   </div>

@@ -124,3 +124,75 @@ p {
 .links p {
   font-size: 13px;
 }
+
+.edit {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.dust img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.del {
+  text-align: center;
+}
+
+.del .body {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.btn {
+  display: block;
+  width: 150px;
+  height: 30px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid #9dabb3;
+  border-radius: 15px;
+  color: #636b6f;
+  outline:none;
+}
+
+.edit_form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.edit_input {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.back {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  outline:none;
+  margin-top: 20px;
+}
+
+.back a {
+  color: #636b6f;
+  text-decoration: none;
+}
+
+.confirm {
+  display: inline-block;
+  background-color: #fff;
+  color: #636b6f;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-right: 30px;
+  margin-top: 20px;
+  outline:none;
+}
