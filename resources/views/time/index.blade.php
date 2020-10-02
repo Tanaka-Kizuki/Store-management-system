@@ -32,9 +32,11 @@
   <button class="button5">勤怠実績</button>
 </a>
 
+@if(Auth::user()->admin == 0)
 <a href="/time/daily">
   <button class="button6">日次勤怠</button>
 </a>
+@endif
 
 <div class="container">
   @foreach ($itmes as $itme)
