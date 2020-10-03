@@ -35,12 +35,10 @@ class orderController extends Controller
         // 発注テーブル
         $oldOrder = Order::latest()->first();
         if($oldOrder) {
-            if($oldOrder->orderdate == $orderDate) {
-                $oldOrder->fill($datas)->save();
-            } else {
+            if($oldOrder->orderdate !== $orderDate) {
                 $order = Order::create([
                     'orderdate' => $orderDate,
-                ]); 
+                ]);
             }
         } else {
             $order = Order::create([
@@ -64,7 +62,7 @@ class orderController extends Controller
 
             //1日一回のみ発注可能
             if($oldData) {
-                if($oldData->order_id != $oldOrder->id) {
+                if($oldData->order_id != $order->id) {
                     $data = Data::create([
                         'order_id' => $order->id,
                         'name' => $datas[$i]['name'],
