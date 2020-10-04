@@ -24,8 +24,6 @@ class CreateTimesTable extends Migration
             $table->float('workTime')->nullable();
             $table->integer('month');
             $table->integer('day');
-
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
