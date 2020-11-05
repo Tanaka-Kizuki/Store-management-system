@@ -13,11 +13,11 @@ class UserTableSeeder extends Seeder
     {
         $param = [
             'name' => 'admin',
-            'email' => 'admin@cofee_de_drip',
+            'email' => 'admin@coffee_de_drip',
             'password' => Hash::make('admin'),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
-            'admin' => 30,
+            'admin' => 0,
         ];
         DB::table('users')->insert($param);
     }
