@@ -8,7 +8,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-  <link rel="stylesheet" href="{{asset('/css/auth.css')}}">
+  @if(app('env') == 'production')
+    <link href="{{ secure_asset('css/auth.css') }}" rel="stylesheet">
+  @else
+    <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
+  @endif
+  <!-- <link rel="stylesheet" href="{{asset('/css/auth.css')}}"> -->
 </head>
 <body>
   <div id="login">
