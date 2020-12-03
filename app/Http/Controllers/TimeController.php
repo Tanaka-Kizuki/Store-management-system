@@ -68,7 +68,7 @@ class TimeController extends Controller
             'year' => $year,
         ]);
 
-        return redirect()->back();
+        return redirect('/communication');
     }
 
     //退勤アクション
