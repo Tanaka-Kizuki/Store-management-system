@@ -35,11 +35,12 @@
     <div class="message">
       {!!nl2br(e($item->message))!!}
     </div>
-    <div class="footer">
+    <div class="footer" id="app">
       <p class="name">担当: {{$item->name}}</p>
       <a class="edit" href="/communication/edit?id={{$item->id}}"><img src="{{asset('/image/edit.svg')}}"></a>
       <a class="dust" href="/communication/del?id={{$item->id}}"><img src="{{asset('/image/dust.svg')}}"></a></a>
       <p class="date">{{$item->updated_at}}</p>
+      <like-component :post_id="{{$item->id}}"></like-component>
     </div>
   </div>
   @endforeach

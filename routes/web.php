@@ -68,3 +68,13 @@ Route::post('/order/item','OrderController@itemCreate');
 //食材の編集
 Route::get('/order/item/edit','OrderController@itemEdit');
 ROute::post('/order/item/edit','OrderController@itemUpdate');
+
+
+//いいね機能
+Route::get('/posts/{post?}/check', 'LikeController@check')->name('like.check');
+Route::get('/posts/{post?}/firstcheck', 'LikeController@firstcheck')->name('like.firstcheck');
+Route::resource('posts.likes', 'LikeController', [
+     'only' => ['store'],
+]);
+//いいねしているユーザーの表示
+Route::get('/posts/{post?}/like','LikeController@like');

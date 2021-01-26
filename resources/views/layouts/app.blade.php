@@ -31,5 +31,6 @@
   @yield('content')
   
   <script src="{{asset('/js/auth.js')}}"></script>
+  <script src="{{mix('js/app.js')}}"></script>
 </body>
 </html>
