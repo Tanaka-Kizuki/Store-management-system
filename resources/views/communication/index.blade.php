@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @push('css')
-  <link rel="stylesheet" href="{{mix('/css/communication.css')}}">
+  <link rel="stylesheet" href="{{asset('/css/communication.css')}}">
 @endpush
 
 @section('content')
