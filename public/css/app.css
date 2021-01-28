@@ -10966,3 +10966,15 @@ html, body {
   letter-spacing: 7px;
   margin-top: 50px;
 }
+
+.like_button {
+  display: inline;
+}
+
+.like_button button {
+  display: inline;
+  width: 50px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
