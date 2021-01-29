@@ -59,6 +59,12 @@ p {
   padding: 8px 16px;
   border: none;
   cursor: pointer;
+  margin: 10px;
+}
+
+.submit-btn:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .items {

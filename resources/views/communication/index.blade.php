@@ -22,6 +22,7 @@
         </div>
         <div class="text-align x-100">
           <input class="submit-btn" type="submit" value="Write">
+          <a href="/home" class="submit-btn">戻る</a>
         </div>
     </form>
   </section>
