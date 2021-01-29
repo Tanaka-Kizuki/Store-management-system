@@ -28,6 +28,11 @@
 
 .button3 {
      border: 2px solid #01334d;
+     margin-right: 30px;
+}
+
+.button4 {
+     border: 2px solid #001b29;
 }
 
 .date {

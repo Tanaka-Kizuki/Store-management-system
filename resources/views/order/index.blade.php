@@ -15,5 +15,6 @@
           @if(Auth::user()->admin == 0)
           <a class="link button3" href="/order/item">商品設定</a>
           @endif
+          <a class="link button3" href="/home">戻る</a>
      </div>
 @endsection
