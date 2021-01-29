@@ -12,7 +12,11 @@ button {
   border-radius: 40px;
   background-color: #ffff;
   font-weight: 500;
-  outline:none
+  outline:none;
+}
+
+button:focus {
+  outline:none;
 }
 
 .button1 {
@@ -40,6 +44,13 @@ button {
   margin-right: 30px;
 }
 
+.button6 {
+  margin-right: 30px;
+}
+
+.button7 {
+  border: 2px solid rgb(255, 128, 134);
+}
 
 .day {
   display: inline;

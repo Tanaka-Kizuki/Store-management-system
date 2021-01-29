@@ -38,6 +38,10 @@
 </a>
 @endif
 
+<a href="/home">
+  <button class="button7">戻る</button>
+</a>
+
 <div class="container">
   @foreach ($itmes as $itme)
   <div class="attendance">
