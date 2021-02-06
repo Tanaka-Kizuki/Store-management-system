@@ -54,6 +54,6 @@ class LikeController extends Controller
              $user = $users->where('id',$data->user_id)->first();
              $param[] = $user;
         }
-        return view('like',['param'=>$param]);
+        return view('communication/like',['param'=>$param]);
    }
 }
