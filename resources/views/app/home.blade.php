@@ -21,7 +21,7 @@
         top: 0;
         left: 0;
         background-color: #ffff;
-        opacity: 0.3;
+        opacity: 0.4;
         z-index: 0;
     }
     .content {
